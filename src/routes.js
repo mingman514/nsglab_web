@@ -42,11 +42,15 @@ import Icon from "@mui/material/Icon";
 // @mui icons
 import ForumIcon from '@mui/icons-material/Forum';
 
+import styled from 'styled-components';
+import {Mattermost} from '@styled-icons/simple-icons';
+
 // Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
+import Professor from "pages/Professor"
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -68,23 +72,24 @@ import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 
+const MMIcon = styled(Mattermost)`
+  width: 12px;
+  height: 12px;
+  color: inherit;  
+`;
+
 const routes = [
   {
     name: "About",
         collapse: [
           {
             name: "introduction",
-            route: "/aboutus",
+            route: "/introduction",
             component: <AboutUs />,
           },
           {
             name: "research area",
-            route: "/aboutus",
-            component: <AboutUs />,
-          },
-          {
-            name: "location",
-            route: "/aboutus",
+            route: "/research-area",
             component: <AboutUs />,
           },
         ],
@@ -93,13 +98,13 @@ const routes = [
     name: "Members",
     collapse: [
       {
-        name: "Professor",
-        route: "/pages/authentication/sign-in",
+        name: "professor",
+        route: "/professor",
         component: <SignIn />,
       },
       {
-        name: "Students",
-        route: "/pages/authentication/sign-in",
+        name: "students",
+        route: "/students",
         component: <SignIn />,
       },
     ],
@@ -109,13 +114,13 @@ const routes = [
     collapse:
     [
       {
-        name: "Papers",
-        route: "/sections/page-sections/page-headers",
+        name: "papers",
+        route: "/papers",
         component: <PageHeaders />,
       },
       {
-        name: "Presentaions",
-        route: "/sections/page-sections/features",
+        name: "presentaions",
+        route: "/presentations",
         component: <Features />,
       },
     ],
@@ -124,13 +129,14 @@ const routes = [
     name: "Notice",
     route: "/notice",
   },
+  // Email, Location
   {
     name: "Contact",
     route: "/contact",
   },
   {
     name: "mattermost",
-    icon: <ForumIcon />,
+    icon: <MMIcon/>,
     href: "https://mm.netsys.skku.edu",
   },
 ];

@@ -476,7 +476,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"} fontSize="24px">
               {brand}
             </MKTypography>
           </MKBox>
@@ -517,7 +517,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Material Kit 2",
+  brand: "NETSYS LAB",
   transparent: false,
   light: false,
   action: false,

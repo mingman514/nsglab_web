@@ -3,7 +3,7 @@
 * Material Kit 2 React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-reaact
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -25,6 +25,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 // Material Kit 2 React themes
 import theme from "assets/theme";
 // import Presentation from "layouts/pages/presentation";
+import Home from "pages/Home"
+import Professor from "pages/Professor"
 import AboutUs from "pages/LandingPages/AboutUs"
 import Author from "pages/LandingPages/Author"
 import ContactUs from "pages/LandingPages/ContactUs"
@@ -61,10 +63,11 @@ export default function App() {
         {/* {getRoutes(routes)} */}
         {/* <Route path="/presentation" element={<Presentation />} /> */}
         {/* <Route path="*" element={<Navigate to="/presentation" />} /> */}
-        <Route path="/" element={<AboutUs />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/professor" element={<Professor />} />
         <Route path="/author" element={<Author />} />
         <Route path="/contactus" element={<ContactUs />} />
-      </Routes>
+</Routes>
     </ThemeProvider>
   );
 }
