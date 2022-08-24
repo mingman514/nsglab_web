@@ -28,18 +28,18 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
-import Team from "pages/LandingPages/AboutUs/sections/Team";
-import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
-import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
+import Information from "pages/Home/sections/Information";
+import Team from "pages/Home/sections/Team";
+import Featuring from "pages/Home/sections/Featuring";
+import Newsletter from "pages/Home/sections/Newsletter";
 
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-// import bgImage from "assets/images/bg-about-us.jpg";
-import bgImage from "assets/images/cyber-2377718.jpg";
+// import bgImage from "assets/images/cyber-2377718.jpg";
+import bgImage from "assets/images/circuit-board-g0016f00d8_1920.jpg";
 
 function AboutUs() {
   return (

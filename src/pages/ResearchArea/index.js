@@ -14,41 +14,42 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
+import MKTypography from "components/MKTypography";
+import MKButton from "components/MKButton";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import DefaultFooter from "examples/Footers/DefaultFooter";
 
-// Author page sections
-import Profile from "pages/Professor/sections/Profile";
-import Posts from "pages/Professor/sections/Posts";
-import Contact from "pages/Professor/sections/Contact";
-import Footer from "pages/Professor/sections/Footer";
+// About Us page sections
+import Features from "pages/ResearchArea/sections/Features";
 
 // Routes
 import routes from "routes";
+import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/skku_campus.jpg";
+import bgImage from "assets/images/palace-garden-g446d7543f_1920.jpg";
 
-function Professor() {
+function Introduction() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "info",
+          color: "default",
         }}
         transparent
         light
       />
-      <MKBox bgColor="white">
+        <MKBox bgColor="white">
         <MKBox
           minHeight="25rem"
           width="100%"
@@ -64,25 +65,24 @@ function Professor() {
             placeItems: "center",
           }}
         />
-        <Card
-          sx={{
-            p: 2,
-            mx: { xs: 2, lg: 3 },
-            mt: -8,
-            mb: 4,
-            backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
-            backdropFilter: "saturate(200%) blur(30px)",
-            boxShadow: ({ boxShadows: { xxl } }) => xxl,
-          }}
-        >
-          <Profile />
-          <Posts />
-        </Card>
-        <Contact />
-        <Footer />
+
+      <Card
+        sx={{
+          p: 2,
+          mx: { xs: 2, lg: 3 },
+          mt: -8,
+          mb: 4,
+          boxShadow: ({ boxShadows: { xxl } }) => xxl,
+        }}
+      >
+        <Features />
+      </Card>
+      <MKBox pt={6} px={1} mt={6}>
+        <DefaultFooter content={footerRoutes} />
+      </MKBox>
       </MKBox>
     </>
   );
 }
 
-export default Professor;
+export default Introduction;

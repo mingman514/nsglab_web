@@ -66,7 +66,7 @@ function CenteredBlogCard({ image, title, description, action }) {
             {description}
           </MKTypography>
         </MKBox>
-        {action.type === "external" ? (
+        {/* {action.type === "external" ? (
           <MKButton
             component={MuiLink}
             href={action.route}
@@ -88,7 +88,7 @@ function CenteredBlogCard({ image, title, description, action }) {
           >
             {action.label}
           </MKButton>
-        )}
+        )} */}
       </MKBox>
     </Card>
   );
@@ -99,21 +99,21 @@ CenteredBlogCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
-    route: PropTypes.string.isRequired,
-    color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "light",
-    ]),
-    label: PropTypes.string.isRequired,
-  }).isRequired,
+  // action: PropTypes.shape({
+  //   type: PropTypes.oneOf(["external", "internal"]).isRequired,
+  //   route: PropTypes.string.isRequired,
+  //   color: PropTypes.oneOf([
+  //     "primary",
+  //     "secondary",
+  //     "info",
+  //     "success",
+  //     "warning",
+  //     "error",
+  //     "dark",
+  //     "light",
+  //   ]),
+  //   label: PropTypes.string.isRequired,
+  // }).isRequired,
 };
 
 export default CenteredBlogCard;

@@ -71,6 +71,7 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+import Introduction from "pages/Introduction";
 
 const MMIcon = styled(Mattermost)`
   width: 12px;
@@ -85,7 +86,7 @@ const routes = [
           {
             name: "introduction",
             route: "/introduction",
-            component: <AboutUs />,
+            component: <Introduction />,
           },
           {
             name: "research area",

@@ -26,8 +26,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "assets/theme";
 // import Presentation from "layouts/pages/presentation";
 import Home from "pages/Home"
+import Introduction from "pages/Introduction"
+import ResearchArea from "pages/ResearchArea"
 import Professor from "pages/Professor"
-import AboutUs from "pages/LandingPages/AboutUs"
+import Students from "pages/Students"
 import Author from "pages/LandingPages/Author"
 import ContactUs from "pages/LandingPages/ContactUs"
 
@@ -64,7 +66,10 @@ export default function App() {
         {/* <Route path="/presentation" element={<Presentation />} /> */}
         {/* <Route path="*" element={<Navigate to="/presentation" />} /> */}
         <Route path="/" element={<Home />} />
+        <Route path="/introduction" element={<Introduction />} />
+        <Route path="/research-area" element={<ResearchArea />} />
         <Route path="/professor" element={<Professor />} />
+        <Route path="/students" element={<Students />} />
         <Route path="/author" element={<Author />} />
         <Route path="/contactus" element={<ContactUs />} />
 </Routes>
