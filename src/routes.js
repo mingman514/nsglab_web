@@ -72,6 +72,8 @@ import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 import Introduction from "pages/Introduction";
+import Courses from "pages/Courses";
+import Papers from "pages/Papers";
 
 const MMIcon = styled(Mattermost)`
   width: 12px;
@@ -93,6 +95,11 @@ const routes = [
             route: "/research-area",
             component: <AboutUs />,
           },
+          {
+            name: "courses",
+            route: "/courses",
+            component: <Courses />,
+          }
         ],
   },
   {
@@ -117,7 +124,7 @@ const routes = [
       {
         name: "papers",
         route: "/papers",
-        component: <PageHeaders />,
+        component: <Papers />,
       },
       {
         name: "presentaions",
