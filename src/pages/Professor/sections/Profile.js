@@ -107,9 +107,23 @@ function Profile() {
 
       <Container>
         <Grid container item xs={12} justifyContent="center" mx="auto">
-          <Grid item xs={12} sx={{ mb: 7 }}>
+          <Grid item xs={12} lg={6} sx={{ mb: 7 }}>
             <MKTypography component="span" variant="h4">
-              Education
+            Interests
+            </MKTypography>
+            <Grid item xs={12} m={3}>
+              <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                <li>operating systems</li>
+                <li>parallel and distributed computing</li>
+                <li>GPU clusters and HPC data centers</li>
+                <li>TCP network stack</li>
+              </MKTypography>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} lg={6} sx={{ mb: 7 }}>
+            <MKTypography component="span" variant="h4">
+            Education
             </MKTypography>
             <Grid item xs={12} m={3}>
               <MKTypography component="span" variant="body2" color="text" fontWeight="light">
