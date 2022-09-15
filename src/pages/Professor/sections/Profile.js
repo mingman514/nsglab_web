@@ -118,6 +118,31 @@ function Profile() {
                 <li>GPU clusters and HPC data centers</li>
                 <li>TCP network stack</li>
               </MKTypography>
+              <MKTypography
+                  component="a"
+                  href="research-area"
+                  variant="body1"
+                  fontWeight="light"
+                  color="info"
+                  fontSize="medium"
+                  mt={1}
+                  sx={{
+                    width: "max-content",
+                    display: "flex",
+                    alignItems: "center",
+
+                    "& .material-icons-round": {
+                      transform: `translateX(3px)`,
+                      transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                    },
+
+                    "&:hover .material-icons-round, &:focus .material-icons-round": {
+                      transform: `translateX(6px)`,
+                    },
+                  }}
+                >
+                  More <Icon fontSize="small" sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+                </MKTypography>
             </Grid>
           </Grid>
 
@@ -129,7 +154,7 @@ function Profile() {
               <MKTypography component="span" variant="body2" color="text" fontWeight="light">
                 <li>Seoul Science High School, KAIST, 2000</li>
                 <li>B.S in Department of Computer Science, KAIST, 2004</li>
-                <li>PhD in Department of Computer Science, KAIST, 2015</li>
+                <li>Ph.D in Department of Computer Science, KAIST, 2015</li>
               </MKTypography>
             </Grid>
           </Grid>

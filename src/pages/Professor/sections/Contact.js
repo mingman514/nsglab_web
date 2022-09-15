@@ -146,7 +146,7 @@ function Contact() {
                      1st Engineering Building #23111, Sungkyunkwan University
                     </MKTypography>
                   </MKBox>
-                  <Map />
+                  <Map latitude="37.294349" longitude="126.976421" />
                 </MKBox>
               </Grid>
             </Grid>

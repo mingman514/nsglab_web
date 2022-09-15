@@ -116,10 +116,6 @@ function Team() {
             <MKTypography variant="h3" color="white">
               M.S. Students
             </MKTypography>
-            <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
-            </MKTypography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
@@ -170,6 +166,7 @@ function Team() {
         </Grid>
       </Container>
     </MKBox>
+
     <MKBox
       component="section"
       variant="gradient"
@@ -183,11 +180,7 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="black">
-              Alumni
-            </MKTypography>
-            <MKTypography variant="body2" color="black" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+              Undergraduate
             </MKTypography>
           </Grid>
         </Grid>
@@ -197,8 +190,9 @@ function Team() {
               <TeamCard
                 image={team1}
                 name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                position={{ color: "success", status: "B.S.", date: "Jan. '21" }}
+                email="aaa@skku.edu"
+                topic="GPU, TCP Network Stack"
               />
             </MKBox>
           </Grid>
@@ -207,8 +201,9 @@ function Team() {
               <TeamCard
                 image={team2}
                 name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                position={{ color: "success", status: "B.S.", date: "Jan. '21" }}
+                email="bbb@skku.edu"
+                topic="RDMA"
               />
             </MKBox>
           </Grid>
@@ -217,8 +212,9 @@ function Team() {
               <TeamCard
                 image={team3}
                 name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                position={{ color: "success", status: "B.S.", date: "Jan. '21" }}
+                email="ccc@skku.edu"
+                topic="FPGA"
               />
             </MKBox>
           </Grid>
@@ -227,8 +223,75 @@ function Team() {
               <TeamCard
                 image={team4}
                 name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                position={{ color: "success", status: "B.S.", date: "Jan. '21" }}
+                email="ddd@skku.edu"
+                topic="CFS"
+              />
+            </MKBox>
+          </Grid>
+        </Grid>
+      </Container>
+      </MKBox>
+
+      <MKBox
+      component="section"
+      variant="gradient"
+      bgColor="dark"
+      position="relative"
+      py={6}
+      px={{ xs: 2, lg: 0 }}
+      mx={-2}
+    >
+      <Container>
+        <Grid container>
+          <Grid item xs={12} md={8} sx={{ mb: 6 }}>
+            <MKTypography variant="h3" color="white">
+              Alumni
+            </MKTypography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={1}>
+              <TeamCard
+                image={team1}
+                name="Emma Roberts"
+                position={{ color: "warning", status: "Ph.D", date: "Jan. '21" }}
+                email="aaa@skku.edu"
+                topic="GPU, TCP Network Stack"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={1}>
+              <TeamCard
+                image={team2}
+                name="William Pearce"
+                position={{ color: "warning", status: "M.S.", date: "Jan. '21" }}
+                email="bbb@skku.edu"
+                topic="RDMA"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={{ xs: 1, lg: 0 }}>
+              <TeamCard
+                image={team3}
+                name="Ivana Flow"
+                position={{ color: "warning", status: "Ph.D", date: "Jan. '21" }}
+                email="ccc@skku.edu"
+                topic="FPGA"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={{ xs: 1, lg: 0 }}>
+              <TeamCard
+                image={team4}
+                name="Marquez Garcia"
+                position={{ color: "warning", status: "M.S.", date: "Jan. '21" }}
+                email="ddd@skku.edu"
+                topic="CFS"
               />
             </MKBox>
           </Grid>

@@ -73,6 +73,7 @@ import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 import Introduction from "pages/Introduction";
 import Papers from "pages/Papers";
+import { Paper } from "@mui/material";
 
 const MMIcon = styled(Mattermost)`
   width: 12px;
@@ -82,17 +83,21 @@ const MMIcon = styled(Mattermost)`
 
 const routes = [
   {
-    name: "About",
+    name: "Intro",
+    route: "/introduction",
+  },
+  {
+    name: "Research",
         collapse: [
-          {
-            name: "introduction",
-            route: "/introduction",
-            component: <Introduction />,
-          },
           {
             name: "research area",
             route: "/research-area",
             component: <AboutUs />,
+          },
+          {
+            name: "publication",
+            route: "/papers",
+            component: <Papers />,
           },
         ],
   },
@@ -109,22 +114,6 @@ const routes = [
         route: "/students",
         component: <SignIn />,
       },
-    ],
-  },
-  {
-    name: "Publications",
-    collapse:
-    [
-      {
-        name: "papers",
-        route: "/papers",
-        component: <Papers />,
-      },
-      /*{
-        name: "presentations",
-        route: "/presentations",
-        component: <Features />,
-      },*/
     ],
   },
   {

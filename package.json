@@ -39,7 +39,6 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://mingman514.github.io/nsglab_web",
   "eslintConfig": {
     "extends": [
       "react-app",

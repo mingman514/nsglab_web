@@ -23,6 +23,8 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
+import Map from "components/Map"
+
 // Images
 import bgImage from "assets/images/examples/blog2.jpg";
 
@@ -123,7 +125,7 @@ function ContactItem() {
               <Grid item xs={12} lg={7}>
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
-                    (지도 연동?)
+                    <Map latitude="37.295861" longitude="126.975917" />
                   </MKBox>
                 </MKBox>
               </Grid>
