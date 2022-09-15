@@ -120,11 +120,11 @@ const routes = [
         route: "/papers",
         component: <Papers />,
       },
-      {
+      /*{
         name: "presentations",
         route: "/presentations",
         component: <Features />,
-      },
+      },*/
     ],
   },
   {

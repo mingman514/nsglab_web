@@ -16,60 +16,48 @@ import ra3 from "assets/images/bg-sign-in-basic.jpeg"
 
 const PaperItems = [
   {
-    name: "Younghoon Kim",
-    position: "Professor",
-    googleScholar: "https://scholar.google.com/citations?hl=ko&user=arsNhkgAAAAJ",
-    papers: [
-      {
-        title: "Deep Learning for Image Classification",
-        description: `Deep Learning for Image Classification is a paper that aims to classify images using deep learning.
-        The paper is published in the journal of Machine Learning.`,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-      {
-        title: "Deep Learning for Image Classificatio2234n",
-        description: `Deep Learning for Image Classification is a paper that aims to classify images using deep learning.
-        The paper is published in the journal of Machine Learning.`,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-      {
-        title: "Deep Learning for Image Classific645874ation",
-        description: `Deep Learning for Image Classification is a paper that aims to classify images using deep learning.
-        The paper is published in the journal of Machine Learning.`,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-    ]
+    title: "Peer-to-peer communication method in content centric network environment",
+    link: "https://patents.google.com/patent/US9485288B2/en",
+    author: ["Kim Yusung", "Younghoon Kim", "Ikjun Yeom"],
+    journal: "US Patent 9,485,288",
+    year: 2017,
+    description: `This paper is good.
+    This paper is good.
+    This paper is good.
+    This paper is good.`,
   },
   {
-    name: "Mingman",
-    position: "Master",
-    googleScholar: null,
-    papers: [
-      {
-        title: "Deep Learning for Image Classification435423",
-        description: `Deep Learning for Image Classification is a paper that aims to classify images using deep learning.
-        The paper is published in the journal of Machine Learning.`,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-      {
-        title: "Deep Learning for Image Classification1232132",
-        description: null,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-      {
-        title: "Deep Learning for Image Classification123",
-        description: null,
-        link: "https://arxiv.org/abs/1606.06160",
-      },
-    ]
+    title: "Peer-assisted multimedia delivery using periodic multicast",
+    link: "https://www.sciencedirect.com/science/article/abs/pii/S0020025514011141",
+    journal: "Information Sciences 298",
+    year: 2015,
+    author: ["Younghoon Kim", "Yusung Kim", "Hyunsoo Yoon", "Ikjun Yeom"],
+  },
+  {
+    title: "GPU-Ether: GPU-native packet I/O for GPU applications on commodity ethernet",
+    link: "https://ieeexplore.ieee.org/abstract/document/9488699/",
+    journal: "IEEE INFOCOM 2021",
+    year: 2021,
+    author: ["Changue Jung", "Suhwan Kim", "Ikjum Yeom", "Honguk Woo", "Younghoon Kim"],
   },
 ]
 
+const LabMembers = [
+  {
+    name: "Younghoon Kim",
+    link: "/professor",
+  },
+  {
+    name: "Suhwan Kim",
+    link: "/student#susoon",
+  }
+]
+
 function FeaturesOne() {
+  PaperItems.sort((a, b) => b.year - a.year);
   return (
     <>
-        {PaperItems.map((item, index) => (
-          <Card
+      <Card
             sx={{
               p: 2,
               mx: { xs: 2, lg: 3 },
@@ -79,52 +67,33 @@ function FeaturesOne() {
               boxShadow: ({ boxShadows: { xxl } }) => xxl,
             }}
           >
+        
             <MKBox component="section" py={{ xs: 3, md: 4 }}>
               <Container sx={{mb:2}}>
                 <Grid container alignItems="flex-start">
-                  <Grid container>
-                    <Grid item style={{flexGrow:"1"}}>
-                      <MKTypography variant="h3" my={1}>
-                        {item.name}
-                      </MKTypography>
-                    </Grid>
-                    <Grid item>
-                      <MKTypography variant="h4" my={1}>
-                        {item.position}
-                      </MKTypography>
-                    </Grid>
-                    
-                    
-                  </Grid>
-                  {item.googleScholar?
-                      <MKTypography variant="h5" my={1}>
-                        <a href={item.googleScholar}>Google Scholar</a>
-                      </MKTypography>
-                      : <></>}
-                </Grid>
-              </Container>
-              <Container sx={{mb:2}}>
-                <Grid container alignItems="flex-start">
-                  <Grid>
-                    <MKTypography variant="h5" my={1}>
-                      Papers
-                    </MKTypography>
-                  </Grid>
-                </Grid>
-              </Container>
-              <Container sx={{mb:2}}>
-                <Grid container alignItems="flex-start">
-                  <Grid>
-                    {item.papers.map((paper, index) => (
-                      <Stack spacing={0} mb={1}>
+                  <Grid flexGrow={1}>
+                  {PaperItems.map((paper, index) => (
+                      <Stack spacing={0} mb={1} >
                         <MKTypography variant="body1">
                           <a href={paper.link}>{paper.title}</a>
                         </MKTypography>
-                        {paper.description ? (
-                          <MKTypography variant="body2" mb={1}>
-                          {paper.description}
+                        <MKTypography variant="body2" color="textSecondary">
+                          {paper.year}
                         </MKTypography>
-                        ) : <></>}
+                        <Stack spacing={0} mb={0} width="match-parent" direction="row" alignItems="center" justifyContent="space-between">
+                          <MKTypography variant="body2" color="textSecondary">
+                            {paper.journal}
+                          </MKTypography>
+                          <MKTypography variant="body2" color="textSecondary">
+                            {/* List all paper.author with comma. If he/she in the LabMembers, link it.*/}
+                            {paper.author.map((author, index) => (
+                              LabMembers.filter((member) => member.name === author).length > 0 ?
+                              <><a href={LabMembers.filter((member) => member.name === author)[0].link}>{author}</a>{index !== paper.author.length - 1 ? ", " : ""}</>
+                              :
+                              <>{author}{index !== paper.author.length - 1 ? ", " : ""}</>
+                            ))}
+                          </MKTypography>
+                        </Stack>
                       </Stack>
                     ))}
                   </Grid>
@@ -132,7 +101,6 @@ function FeaturesOne() {
               </Container>
             </MKBox>
           </Card>
-        ))}
     </>
   );
 }

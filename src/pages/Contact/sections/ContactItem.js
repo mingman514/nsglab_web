@@ -67,10 +67,10 @@ function ContactItem() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                      Contact Information
+                      Contact
                     </MKTypography>
                     <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                      If you have any inquires, please feel free to contact us.
+                      If you have any inquires about the lab, please contact.
                     </MKTypography>
                     <MKBox display="flex" p={1}>
                       <MKTypography variant="button" color="white">
@@ -123,15 +123,7 @@ function ContactItem() {
               <Grid item xs={12} lg={7}>
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
-                    <MKTypography variant="body1" mb={1}>
-                      If you have inquires, please send e-mail to left address.
-                    </MKTypography>
-                    <MKTypography variant="body2" mb={3}>
-                      ...
-                    </MKTypography>
-                    <MKTypography variant="body1" mb={2}>
-                      In case of the lecture inquiry, check the notice and send e-mail to lecture email.
-                    </MKTypography>
+                    (지도 연동?)
                   </MKBox>
                 </MKBox>
               </Grid>

@@ -16,16 +16,18 @@ import ra3 from "assets/images/bg-sign-in-basic.jpeg"
 
 const NoticeItems = [
   {
-    title: "Call for students",
-    description: `If you are looking for a job in the field of computer science, 
-    please contact us.
-    We are looking for students who are interested in computer science.
-    We are looking for students who are interested in computer science.
-    We are looking for students who are interested in computer science.`,
+    title: "학부연구생 모집 중",
+    description: `학부연구생을 모집 중입니다.
+    아래 조건에 맞는 분은 연구실로 문의 바랍니다.
+    - 소프트웨어학과 원전공 혹은 복수전공
+    - 컴퓨터 네트워크, 시스템프로그래밍 수강
+    - C/C++/Python/Java/Go 등 프로그래밍 언어 경험
+    - 리눅스 환경에서의 개발 경험
+    `,
   },
   {
     title: "Another Notice",
-    description: `Intentionally left blank.`,
+    description: `Another Example Notice.`,
   },
 ]
 
