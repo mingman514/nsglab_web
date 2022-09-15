@@ -31,8 +31,6 @@ import ResearchArea from "pages/ResearchArea"
 import Professor from "pages/Professor"
 import Students from "pages/Students"
 import Author from "pages/LandingPages/Author"
-import ContactUs from "pages/LandingPages/ContactUs"
-import Courses from "pages/Courses";
 import Notice from "pages/Notice";
 import Papers from "pages/Papers";
 import Contact from "pages/Contact";
@@ -72,7 +70,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/introduction" element={<Introduction />} />
         <Route path="/research-area" element={<ResearchArea />} />
-        <Route path="/courses" element={<Courses />} />
         <Route path="/professor" element={<Professor />} />
         <Route path="/students" element={<Students />} />
         <Route path="/author" element={<Author />} />

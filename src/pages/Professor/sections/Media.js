@@ -31,12 +31,12 @@ import post2 from "assets/images/examples/testimonial-6-3.jpg";
 import post3 from "assets/images/examples/blog-9-4.jpg";
 import post4 from "assets/images/examples/blog2.jpg";
 
-function Places() {
+function Media() {
   return (
     <MKBox component="section" py={2}>
       <Container>
         <Grid container item xs={12} lg={6}>
-          <MKTypography variant="h3" mb={6}>
+          <MKTypography variant="h4" mb={6}>
             Check my latest blogposts
           </MKTypography>
         </Grid>
@@ -98,4 +98,4 @@ function Places() {
   );
 }
 
-export default Places;
+export default Media;

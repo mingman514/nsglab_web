@@ -23,6 +23,7 @@ import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import Intro from "pages/Introduction/sections/Intro";
 
 // image
 import labPhoto from "assets/images/nslab_introduction.jpg";
@@ -34,7 +35,7 @@ function Information() {
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} lg={6}>
             <Grid container justifyContent="flex-start">
-              <Grid item xs={12} md={6}>
+              {/* <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
                     icon="public"
@@ -69,14 +70,15 @@ function Information() {
                     description="We get insulted by others, lose trust for those We get back freezes"
                   />
                 </MKBox>
-              </Grid>
+              </Grid> */}
+              <Intro />
             </Grid>
           </Grid>
-          <Grid item xs={12} lg={5} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
+          <Grid item xs={12} lg={6} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
             <CenteredBlogCard
               image={labPhoto}
-              title="Get insights on Search"
-              description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+              title="Passionate, Energetic, Dynamic"
+              description="Website visitors today demand a frictionless user expericence — especially when using search."
               // action={{
               //   type: "internal",
               //   route: "pages/company/about-us",

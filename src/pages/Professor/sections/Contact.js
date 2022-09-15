@@ -26,6 +26,8 @@ import MKTypography from "components/MKTypography";
 // Images
 import bgImage from "assets/images/examples/blog2.jpg";
 
+import Map from "components/Map"
+
 function Contact() {
   return (
     <MKBox component="section" py={{ xs: 0, lg: 6 }}>
@@ -137,59 +139,14 @@ function Contact() {
               <Grid item xs={12} lg={7}>
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
-                    <MKTypography variant="h2" mb={1}>
-                      Say Hi!
+                    <MKTypography variant="h3" mb={1}>
+                      Professor's Office
                     </MKTypography>
-                    <MKTypography variant="body1" color="text" mb={2}>
-                      We&apos;d like to talk with you.
+                    <MKTypography variant="body1" color="text" mb={-4}>
+                     1st Engineering Building #23111, Sungkyunkwan University
                     </MKTypography>
                   </MKBox>
-                  <MKBox pt={0.5} pb={3} px={3}>
-                    <Grid container>
-                      <Grid item xs={12} pr={1} mb={6}>
-                        <MKInput
-                          variant="standard"
-                          label="My name is"
-                          placeholder="Full Name"
-                          InputLabelProps={{ shrink: true }}
-                          fullWidth
-                        />
-                      </Grid>
-                      <Grid item xs={12} pr={1} mb={6}>
-                        <MKInput
-                          variant="standard"
-                          label="I'm looking for"
-                          placeholder="What you love"
-                          InputLabelProps={{ shrink: true }}
-                          fullWidth
-                        />
-                      </Grid>
-                      <Grid item xs={12} pr={1} mb={6}>
-                        <MKInput
-                          variant="standard"
-                          label="Your message"
-                          placeholder="I want to say that..."
-                          InputLabelProps={{ shrink: true }}
-                          fullWidth
-                          multiline
-                          rows={6}
-                        />
-                      </Grid>
-                    </Grid>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      md={6}
-                      justifyContent="flex-end"
-                      textAlign="right"
-                      ml="auto"
-                    >
-                      <MKButton variant="gradient" color="info">
-                        Send Message
-                      </MKButton>
-                    </Grid>
-                  </MKBox>
+                  <Map />
                 </MKBox>
               </Grid>
             </Grid>

@@ -16,18 +16,18 @@ import ra3 from "assets/images/bg-sign-in-basic.jpeg"
 function FeaturesOne() {
   return (
     <MKBox component="section" py={{ xs: 3, md: 12 }}>
-      <Container sx={{mb:10}}>
+      <Container sx={{mb:5}}>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={5}>
+          {/* <Grid item xs={12} lg={5}> */}
+          <Grid item xs={12}>
             <MKTypography variant="h3" my={1}>
-              Read More About Us
+              Research Interests
             </MKTypography>
-            <MKTypography variant="body2" color="text" mb={2}>
-              Pain is what we go through as we become older. We get insulted by others, lose trust
-              for those others. We get back stabbed by friends. It becomes harder for us to give
-              others a hand.
+            <MKTypography variant="body2" color="text" mb={0}>
+              {/* We work on problems in the intersection of networking and systems, especially with accelators. */}
+              Research interests broadly cover network research areas and the recent research goal is on the networking performance enhancement inside of the systems by optimizing in-system latency for processing network packets. Specifically, it is known that GPU clusters and HPC data centers are experiencing severe performance degradation due to the network bottleneck, and the recent research goal is on that issue. Implementing high performance networking systems for open source projects also resides inside of the research goals, and projects such as Kubernetes, DistTensor and Horovod are considered as candidates.
             </MKTypography>
-            <MKTypography
+            {/* <MKTypography
               component="a"
               href="#"
               variant="body2"
@@ -51,9 +51,9 @@ function FeaturesOne() {
             >
               More about us
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
-          <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+          {/* <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 1, lg: 0 } }}>
             <Stack>
               <MKBox display="flex" alignItems="center" p={2}>
                 <MKBox
@@ -119,19 +119,19 @@ function FeaturesOne() {
                 </MKTypography>
               </MKBox>
             </Stack>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
 
       <Container sx={{mb:10}}>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={5}>
+          <Grid item xs={12} lg={5} order={{ xs: 2, lg: 1 }}>
             <MKBox position="relative">
               <MKBox component="img" src={ra1} alt="macbook" width="100%" />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
-            <MKTypography variant="h3" my={1}>
+          <Grid item xs={12} lg={5.5} sx={{ ml: { xs: 0, lg: "auto" }, mt: { xs: 1, lg: 0 } }}  order={{ xs: 1, lg: 2 }} >
+            <MKTypography variant="h4" my={1}>
               GPGPU for Packet Processing
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
@@ -165,14 +165,13 @@ function FeaturesOne() {
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon> */}
             </MKTypography>
           </Grid>
-
         </Grid>
       </Container>
 
       <Container sx={{mb:10}}>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={6}>
-            <MKTypography variant="h3" my={1}>
+          <Grid item xs={12} lg={5.5}>
+            <MKTypography variant="h4" my={1}>
               Remote Direct Memory Access
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
@@ -180,7 +179,7 @@ function FeaturesOne() {
               for those others. We get back stabbed by friends. It becomes harder for us to give
               others a hand.
             </MKTypography>
-            <MKTypography
+            {/* <MKTypography
               component="a"
               href="#"
               variant="body2"
@@ -204,9 +203,9 @@ function FeaturesOne() {
             >
               More about us
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
-          <Grid item xs={12} lg={5} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+          <Grid item xs={12} lg={5} sx={{ ml: { xs: 0, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
             <MKBox position="relative">
               <MKBox component="img" src={ra2} alt="macbook" width="100%" />
             </MKBox>
@@ -216,13 +215,13 @@ function FeaturesOne() {
 
       <Container sx={{mb:10}}>
         <Grid container alignItems="center">
-          <Grid item xs={12} lg={5}>
+          <Grid item xs={12} lg={5}  order={{ xs: 2, lg: 1 }}>
             <MKBox position="relative">
               <MKBox component="img" src={ra3} alt="macbook" width="100%" />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
-            <MKTypography variant="h3" my={1}>
+          <Grid item xs={12} lg={5.5} sx={{ ml: { xs: 0, lg: "auto" }, mt: { xs: 6, lg: 0 } }}  order={{ xs: 1, lg: 2 }}>
+            <MKTypography variant="h4" my={1}>
               FPGA
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>

@@ -37,7 +37,7 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/palace-garden-g446d7543f_1920.jpg";
 
-function Introduction() {
+function ResearchArea() {
   return (
     <>
       <DefaultNavbar
@@ -85,4 +85,4 @@ function Introduction() {
   );
 }
 
-export default Introduction;
+export default ResearchArea;

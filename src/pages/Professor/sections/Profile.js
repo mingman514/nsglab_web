@@ -23,6 +23,10 @@ import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
+import { Link } from "react-router-dom";
+
+// Custom page
+import Experience from "pages/Professor/sections/Experience";
 
 // Images
 import prof from "assets/images/yhkim.jpg";
@@ -30,7 +34,7 @@ import prof from "assets/images/yhkim.jpg";
 function Profile() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
-      <Container>
+      <Container sx={{mb: 7}}>
         <Grid container item xs={12} justifyContent="center" mx="auto">
           {/* <MKBox mt={{ xs: -16, md: -20 }} textAlign="center">
             <MKAvatar src={profilePicture} alt="Burce Mars" size="xxl" shadow="xl" />
@@ -44,64 +48,85 @@ function Profile() {
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                 <MKTypography variant="h3">Young Hoon Kim</MKTypography>
-                <MKButton variant="outlined" color="info" size="small">
+                {/* <MKButton variant="outlined" color="info" size="small">
                   Follow
-                </MKButton>
+                </MKButton> */}
               </MKBox>
-              <Grid container spacing={3} mb={3}>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    323&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Posts
+              <Grid container spacing={0} mb={1}>
+                <Grid item xs={12}>
+                  <MKTypography component="span" variant="body2" color="success" fontWeight="bold">
+                    Assistant Professor
                   </MKTypography>
                 </Grid>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    3.5k&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Followers
+                <Grid item xs={12} sx={{ mb: -1.5 }}>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                      College of Computing and Informatics
                   </MKTypography>
                 </Grid>
-                <Grid item>
-                  <MKTypography component="span" variant="body2" fontWeight="bold">
-                    260&nbsp;
-                  </MKTypography>
-                  <MKTypography component="span" variant="body2" color="text">
-                    Following
+                <Grid item xs={12}>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                    Sungkyunkwan University
                   </MKTypography>
                 </Grid>
+                <Grid item xs={12} sx={{ mb: -1 }}>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="bold">
+                    Tel
+                  </MKTypography>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                    : +82-31-290-7977
+                  </MKTypography>
+                </Grid>
+                <Grid item xs={12}>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="bold">
+                    E-mail
+                  </MKTypography>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                    : yhoon@skku.edu
+                  </MKTypography>
+                </Grid>
+                <Grid item xs={12} sx={{ mb: -1 }}>
+                  <MKTypography component="span" variant="body2" color="text" fontWeight="bold">
+                  Address
+                  </MKTypography>
+                </Grid>
+                <Grid item xs={12} sx={{ mb: -1 }}>
+                <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                 : 1st Engineering Building #23111, Sungkyunkwan University,
+                 </MKTypography>
+                </Grid>
+                <Grid item xs={12}>
+                <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                2066, Seobu-ro, Jangan-gu, Suwon-si, Gyeonggi-do, Korea
+                 </MKTypography>
+                 </Grid>
               </Grid>
-              <MKTypography variant="body1" fontWeight="light" color="text">
-                Decisions: If you can&apos;t decide, the answer is no. If two equally difficult
-                paths, choose the one more painful in the short term (pain avoidance is creating an
-                illusion of equality). Choose the path that leaves you more equanimous. <br />
-                <MKTypography
-                  component="a"
-                  href="#"
-                  variant="body1"
-                  fontWeight="light"
-                  color="info"
-                  mt={3}
-                  sx={{
-                    width: "max-content",
-                    display: "flex",
-                    alignItems: "center",
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
 
-                    "& .material-icons-round": {
-                      transform: `translateX(3px)`,
-                      transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                    },
+      <Container>
+        <Grid container item xs={12} justifyContent="center" mx="auto">
+          <Grid item xs={12} sx={{ mb: 7 }}>
+            <MKTypography component="span" variant="h4">
+              Education
+            </MKTypography>
+            <Grid item xs={12} m={3}>
+              <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                <li>Seoul Science High School, KAIST, 2000</li>
+                <li>B.S in Department of Computer Science, KAIST, 2004</li>
+                <li>PhD in Department of Computer Science, KAIST, 2015</li>
+              </MKTypography>
+            </Grid>
+          </Grid>
 
-                    "&:hover .material-icons-round, &:focus .material-icons-round": {
-                      transform: `translateX(6px)`,
-                    },
-                  }}
-                >
-                  More about me <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-                </MKTypography>
+          <Grid item xs={12} sx={{ mb: -1 }}>
+            <MKTypography component="span" variant="h4">
+              Experience
+            </MKTypography>
+            <Grid item xs={12} m={3}>
+              <MKTypography component="span" variant="body2" color="text" fontWeight="light">
+                <Experience />
               </MKTypography>
             </Grid>
           </Grid>

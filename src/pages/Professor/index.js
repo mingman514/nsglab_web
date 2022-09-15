@@ -24,7 +24,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
 import Profile from "pages/Professor/sections/Profile";
-import Posts from "pages/Professor/sections/Posts";
+import Media from "pages/Professor/sections/Media";
 import Contact from "pages/Professor/sections/Contact";
 import Footer from "pages/Professor/sections/Footer";
 
@@ -76,7 +76,7 @@ function Professor() {
           }}
         >
           <Profile />
-          <Posts />
+          {/* <Media /> */}
         </Card>
         <Contact />
         <Footer />
