@@ -51,7 +51,7 @@ function HorizontalTeamCard({ image, name, position, email, topic }) {
               {position.status}
             </MKTypography>
             <MKTypography component="span" variant="body2" color="text" fontWeight="light" ml={1}>
-              ({position.date}~)
+              ({position.date})
             </MKTypography>
             <Grid container mt={1.5}>
               <Grid item xs={12}>

@@ -43,10 +43,6 @@ function Students() {
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          color: "default",
-        }}
         transparent
         light
       />

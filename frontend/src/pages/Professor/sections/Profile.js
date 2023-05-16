@@ -91,7 +91,7 @@ function Profile() {
                 </Grid>
                 <Grid item xs={12} sx={{ mb: -1 }}>
                 <MKTypography component="span" variant="body2" color="text" fontWeight="light">
-                 : 1st Engineering Building #23111, Sungkyunkwan University,
+                 : #85562, Sungkyunkwan University Cooperation Center,
                  </MKTypography>
                 </Grid>
                 <Grid item xs={12}>

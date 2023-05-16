@@ -23,12 +23,12 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
-import Map from "components/Map"
-
 // Images
 import bgImage from "assets/images/examples/blog2.jpg";
 
-function ContactItem() {
+import Map from "components/Map"
+
+function Contact() {
   return (
     <MKBox component="section" py={{ xs: 0, lg: 6 }}>
       <Container>
@@ -69,10 +69,10 @@ function ContactItem() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                      Contact
+                      Contact Information
                     </MKTypography>
                     <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                      If you have any inquires about the lab, please contact.
+                    If you have any questions about the lab, please contact us.
                     </MKTypography>
                     <MKBox display="flex" p={1}>
                       <MKTypography variant="button" color="white">
@@ -86,7 +86,8 @@ function ContactItem() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        (+82) 31-1234-5678
+                        (+82) 31-299-4931 (Lab) <br></br>
+                        (+82) 031-290-7977 (Professor)
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -101,7 +102,7 @@ function ContactItem() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        yhkim @ skku.edu
+                        yhoon@skku.edu
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -116,8 +117,22 @@ function ContactItem() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        SKKU Suwon
+                        85553, Sungkyunkwan University Cooperation Center <br></br>(2066 SEOBU-RO, JANGAN-GU, SUWON-SI, GYEONGGI-DO (16419), KOREA)
                       </MKTypography>
+                    </MKBox>
+                    <MKBox mt={3}>
+                      <MKButton variant="text" color="white" size="large" iconOnly>
+                        <i className="fab fa-facebook" style={{ fontSize: "1.25rem" }} />
+                      </MKButton>
+                      <MKButton variant="text" color="white" size="large" iconOnly>
+                        <i className="fab fa-twitter" style={{ fontSize: "1.25rem" }} />
+                      </MKButton>
+                      <MKButton variant="text" color="white" size="large" iconOnly>
+                        <i className="fab fa-dribbble" style={{ fontSize: "1.25rem" }} />
+                      </MKButton>
+                      <MKButton variant="text" color="white" size="large" iconOnly>
+                        <i className="fab fa-instagram" style={{ fontSize: "1.25rem" }} />
+                      </MKButton>
                     </MKBox>
                   </MKBox>
                 </MKBox>
@@ -125,8 +140,15 @@ function ContactItem() {
               <Grid item xs={12} lg={7}>
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
-                    <Map latitude="37.295861" longitude="126.975917" />
+                    <MKTypography variant="h3" mb={1}>
+                      Professor's Office
+                    </MKTypography>
+                    <MKTypography variant="body1" color="text" mb={-4}>
+                      #85562, Sungkyunkwan University Cooperation Center
+                    </MKTypography>
                   </MKBox>
+                  {/* <Map latitude="37.294349" longitude="126.976421" /> */}
+                  <Map latitude="37.295861" longitude="126.975917" />
                 </MKBox>
               </Grid>
             </Grid>
@@ -137,4 +159,4 @@ function ContactItem() {
   );
 }
 
-export default ContactItem;
+export default Contact;
