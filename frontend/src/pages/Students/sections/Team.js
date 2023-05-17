@@ -58,6 +58,20 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     return start_date + "~" + end_date
   }
 
+  const colorDegreeMatch = (degree) => {
+    switch (degree) {
+      case "phd":
+      case "combined":
+        return "error";
+      case "master":
+        return "info";
+      case "under":
+        return "success";
+      default:
+        return "default";
+    }
+  }
+
   const degreeFormatting = (degree) => {
     switch (degree) {
       case "phd":
@@ -188,7 +202,7 @@ function Team() {
                 key={student._id}
                 image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
                 name={student.name}
-                position={{ color: "error", status: degreeFormatting(student.degree), date: dateFormatting(student) }}
+                position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
                 topic={student.topic}
               />
@@ -230,7 +244,7 @@ function Team() {
                 key={student._id}
                 image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
                 name={student.name}
-                position={{ color: "error", status: degreeFormatting(student.degree), date: dateFormatting(student) }}
+                position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
                 topic={student.topic}
               />
@@ -259,7 +273,7 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              M.S. Students
+              Alumni
             </MKTypography>
           </Grid>
         </Grid>
@@ -273,7 +287,7 @@ function Team() {
                 key={student._id}
                 image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
                 name={student.name}
-                position={{ color: "error", status: degreeFormatting(student.degree), date: dateFormatting(student) }}
+                position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
                 topic={student.topic}
               />
