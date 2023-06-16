@@ -1,12 +1,20 @@
 require('dotenv').config();
 
+const env = process.env.NODE_ENV;
 const express = require('express');
 const app = express();
 
 const cors = require('cors');
-app.use(cors({
-    origin: 'http://localhost:3000'     // 교차출처 리소스 공유 허용 URL
-}));
+
+if (env === "production"){
+  app.use(cors({
+    origin: 'https://netsys.skku.edu'     // 교차출처 리소스 공유 허용 URL
+  }));
+} else {
+  app.use(cors({
+    origin: 'http://localhost:3000'
+  }));
+}
 
 // Connect to MongoDB
 const connect = require('./schemas')

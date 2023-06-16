@@ -37,6 +37,7 @@ import { ClosedCaptionDisabledSharp } from "@mui/icons-material";
 
 // status | start_date | end_date (if not null, isAlumni) | email | topic
 
+const reqUrlPrefix = "https://api.netsys.skku.edu/content/student/"
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const dateFormatting = (student) => {
@@ -93,8 +94,8 @@ function Team() {
 
   useEffect(async() => {
     const result = await axios({
-      method: "post",
-      url: "http://localhost:5000/student",
+      method: "get",
+      url: "https://api.netsys.skku.edu/student",
       responseType: "json",
       // params: { something: "asd", asdf: "as"}
     });
@@ -157,7 +158,7 @@ function Team() {
               <MKBox key={student._id} mb={1}>
               <TeamCard
                 key={student._id}
-                image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
+                image={reqUrlPrefix + student._id + "." + student.image_type}
                 name={student.name}
                 position={{ color: "error", status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
@@ -200,7 +201,7 @@ function Team() {
               <MKBox key={student._id} mb={1}>
               <TeamCard
                 key={student._id}
-                image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
+                image={reqUrlPrefix + student._id + "." + student.image_type}
                 name={student.name}
                 position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
@@ -242,7 +243,7 @@ function Team() {
               <MKBox key={student._id} mb={1}>
               <TeamCard
                 key={student._id}
-                image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
+                image={reqUrlPrefix + student._id + "." + student.image_type}
                 name={student.name}
                 position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}
@@ -285,7 +286,7 @@ function Team() {
               <MKBox key={student._id} mb={1}>
               <TeamCard
                 key={student._id}
-                image={"http://localhost:5000/content/student/" + student._id + "." + student.image_type}
+                image={reqUrlPrefix + student._id + "." + student.image_type}
                 name={student.name}
                 position={{ color: colorDegreeMatch(student.degree), status: degreeFormatting(student.degree), date: dateFormatting(student) }}
                 email={student.email}

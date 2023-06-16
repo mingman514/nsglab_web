@@ -3,7 +3,7 @@ const Student = require('../schemas/student');
 
 const router = express.Router();
 
-router.post('/', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const students = await Student.find().exec();
     return res.status(200).json(students)

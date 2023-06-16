@@ -116,7 +116,7 @@ function AboutUs() {
           </Grid>
         </Container>
       </MKBox>
-      <Card
+    {/*<Card
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
@@ -129,7 +129,7 @@ function AboutUs() {
         <Team />
         <Featuring />
         <Newsletter />
-      </Card>
+      </Card>*/}
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>
