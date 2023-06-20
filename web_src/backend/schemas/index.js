@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const dbUrl = process.env.MONGO_URI;
+const dbUrl = (process.env.NODE_ENV === "production" ? process.env.MONGO_URI : process.env.MONGO_URI_TEST);
 
 const connectToMongo = async () => {
     try {
         mongoose.set('strictQuery', false)
-        mongoose.connect(dbUrl) 
+        mongoose.connect(dbUrl)
         console.log('Mongo connected')
     }
     catch(error) {

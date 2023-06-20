@@ -39,9 +39,9 @@ dotenv.config();
 
 // status | start_date | end_date (if not null, isAlumni) | email | topic
 
-const reqUrlPrefix = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://api.netsys.skku.edu";
-console.log("######## reqUrlPrefix", reqUrlPrefix);
+const reqUrlPrefix = process.env.NODE_ENV === "development" ? `http://localhost:5000` : "https://api.netsys.skku.edu";
 // const reqUrlPrefix = "https://api.netsys.skku.edu/content/student/"
+
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const dateFormatting = (student) => {
