@@ -19,7 +19,6 @@
     "@testing-library/user-event": "12.1.10",
     "axios": "^1.4.0",
     "chroma-js": "2.1.2",
-    "dotenv": "^16.3.1",
     "flatpickr": "4.6.9",
     "prop-types": "15.7.2",
     "react": "17.0.2",

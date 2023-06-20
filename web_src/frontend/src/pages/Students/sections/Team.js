@@ -34,12 +34,9 @@ import team4 from "assets/images/ivana-square.jpg";
 import axios from 'axios'
 import {useEffect, useState} from 'react'
 
-import dotenv from "dotenv";
-dotenv.config();
-
 // status | start_date | end_date (if not null, isAlumni) | email | topic
 
-const reqUrlPrefix = process.env.NODE_ENV === "development" ? `http://localhost:5000` : "https://api.netsys.skku.edu";
+const reqUrlPrefix = process.env.REACT_APP_ENV === "development" ? `http://localhost:5000` : "https://api.netsys.skku.edu";
 // const reqUrlPrefix = "https://api.netsys.skku.edu/content/student/"
 
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
